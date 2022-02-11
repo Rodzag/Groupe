@@ -1,0 +1,76 @@
+.container {
+	width: 80%;
+	border: 1px solid black;
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+nav {
+	width: 100%;
+	margin: 0 auto;
+	background-color: black;
+	color: white;
+	position: sticky;
+	top: 0px;
+}
+
+nav ul {
+	list-style-type: none;
+	display: flex;
+}
+
+nav ul li {
+	flex: 1 1 auto;
+	text-align: center;
+	position: relative;
+}
+
+nav a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	border-bottom: 2px solid transparent;
+	padding: 10px 0px;
+}
+
+nav a:hover {
+	color: orange;
+	border-bottom: 2px solid gold;
+}
+
+.deroulant>a::after {
+	content: "▼";
+	font-size: 12px;
+}
+
+.sous {
+	display: none;
+	box-shadow: 0px 1px 2px #CCC;
+	background-color: black;
+	position: absolute;
+	width: 100%;
+	z-index: 1000;
+	position: absolute;
+}
+
+nav>ul li:hover .sous {
+	display: flex;
+	flex-flow: column wrap;
+}
+
+.sous li {
+	flex: 1 1 auto;
+	text-align: left;
+}
+
+.sous a {
+	padding: 10px;
+	border-bottom: none;
+}
+
+.sous a:hover {
+	border-bottom: none;
+	background-color: black;
+}
